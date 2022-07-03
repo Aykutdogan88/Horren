@@ -1,0 +1,181 @@
+body {
+    background: #ccc;
+    margin: 30px 50px;
+    line-height: 1.4;
+}
+
+html {
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.main-nav ul {
+    display: grid;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.main-nav a {
+    background: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 0.8rem;
+    box-shadow: white;
+}
+
+.main-nav a:hover {
+    background: grey;
+    color: black;
+}
+
+.top-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "showcase showcase top-box1"
+    "showcase showcase top-box1"
+    "showcase showcase top-box2";
+}
+
+.showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(https://www.zenronline.eu/wp-content/uploads/2021/03/Voorjaar2021-banner-kopiëren.jpg);
+    width: 600px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.showcase h1 {
+    font-size: 20px;
+    color: white;
+    
+}
+
+.showcase p {
+    font-size: 10px;
+    color: white;
+    margin-top: 0;
+}
+
+.top-box1 {
+   display: grid;
+    grid-area: top-box1;
+    align-items: center;
+    justify-items: center;
+    padding: 1.5rem;
+}
+
+.top-box2 {
+    display: grid;
+    grid-area: top-box2;
+    align-items: center;
+    justify-items: center;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+}
+
+.boxes {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    
+}
+
+.box {
+    background: rgb(168, 135, 135);
+    text-align: center;
+    padding: 0.5rem 2rem;
+
+}
+
+.box i {
+    padding-top: 30px;
+}
+
+.footer {
+    margin-top: 2rem;
+    background: darkgray;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .fotos {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  .fotos img {
+      width: 100%;
+  }
+
+  .video {
+      display: grid;
+      justify-content: center;
+      padding: 1rem;
+      
+  }
+
+ .formulier {
+     border: 2px solid black;
+     width: fit-content;
+ }
+
+  .boxx {
+      display: block;
+      width: 100%;
+      margin: auto;
+     
+  }
+
+  .boxx label {
+      display: block;
+  }
+
+  
+  @media (max-width: 700px) {
+    .top-container {
+      grid-template-areas:
+        "showcase"
+        "top-box1"
+        "top-box2";
+    }
+  
+    .showcase h1 {
+      font-size: 2.5rem;
+    }
+  
+    .main-nav ul {
+      grid-template-columns: 1fr;
+    }
+  
+  }
+  
+  @media (max-width: 500px) {
+    .top-container {
+      grid-template-areas:
+        'showcase'
+        'top-box1'
+        'top-box2';
+    }
+  }
+  
